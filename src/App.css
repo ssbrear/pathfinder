@@ -26,10 +26,15 @@ header {
 
 #reset-button {
   border: none;
+  outline: none;
   margin-top: 5rem;
   font-size: 40px;
   border-radius: 16px;
   padding: 10px;
+  transition: background-color 0.25s;
+}
+#reset-button:hover {
+  background-color: red;
 }
 
 main {
@@ -45,8 +50,13 @@ main {
   width: 20px;
   height: 20px;
   border: 1px solid black;
-  background-color: rgb(250, 214, 214);
   margin: 0;
   outline: none;
   padding: 0;
+  background-color: rgb(250, 214, 214);
+  transition: background-color 0.25s;
+}
+
+.square:hover {
+  background-color: black;
 }

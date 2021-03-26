@@ -6,18 +6,25 @@ function App() {
   let numberOfSquares = 1000;
 
   const squareClick = (e) => {
-    console.log(e.target);
-    e.target.style.backgroundColor = "black";
+    if (e.target.dataset.value === 'false') {
+      e.target.style.backgroundColor = "black";
+    }
   };
   const squareContext = (e) => {
     e.preventDefault();
-    console.log(e.target);
-    e.target.style.backgroundColor = "red";
+    if (e.target.dataset.value === 'false') {
+      e.target.style.backgroundColor = "";
+    }
   };
   const reset = () => {
     const container = document.getElementsByTagName("main")[0].children;
     for (let i = 0; i < container.length; i++) {
-      container[i].style.backgroundColor = "rgb(250, 214, 214)";
+      if (
+        i === Math.ceil(numberOfSquares / 3) ||
+        i === 2 * Math.ceil(numberOfSquares / 3)
+      )
+        continue;
+      container[i].style.backgroundColor = "";
     }
   };
 
