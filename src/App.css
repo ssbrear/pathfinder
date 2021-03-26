@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-body, #root {
+body,
+#root {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -21,13 +22,17 @@ header {
 #title {
   font-family: Lobster;
   font-size: 48px;
-  color: rgb(250, 214, 214);
+  color: rgb(194, 226, 253);
 }
-
-#reset-button {
+#buttons {
+  display: flex;
+  flex-flow: row wrap;
+}
+#reset-button,
+#start-button {
   border: none;
   outline: none;
-  margin-top: 5rem;
+  margin: 5rem 1rem;
   font-size: 40px;
   border-radius: 16px;
   padding: 10px;
@@ -35,6 +40,9 @@ header {
 }
 #reset-button:hover {
   background-color: red;
+}
+#start-button:hover {
+  background-color: green;
 }
 
 main {
@@ -53,8 +61,8 @@ main {
   margin: 0;
   outline: none;
   padding: 0;
-  background-color: rgb(250, 214, 214);
-  transition: background-color 0.25s;
+  background-color: rgb(193, 226, 255);
+  transition: background-color 0.5s;
 }
 
 .square:hover {
