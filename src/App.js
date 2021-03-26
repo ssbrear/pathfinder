@@ -13,14 +13,26 @@ function App() {
     e.preventDefault();
     console.log(e.target);
     e.target.style.backgroundColor = "red";
-  }
+  };
+  const reset = () => {
+    const container = document.getElementsByTagName("main")[0].children;
+    for (let i = 0; i < container.length; i++) {
+      container[i].style.backgroundColor = "rgb(250, 214, 214)";
+    }
+  };
 
   return (
     <div className="App">
       <header>
         <h1 id="title">Pathfinder</h1>
       </header>
-      <Main squareFuncs={[squareClick, squareContext]} count={numberOfSquares} />
+      <Main
+        squareFuncs={[squareClick, squareContext]}
+        count={numberOfSquares}
+      />
+      <button id="reset-button" type="button" onClick={reset}>
+        Reset
+      </button>
     </div>
   );
 }

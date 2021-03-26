@@ -4,7 +4,6 @@ function Square({ squareFuncs, index }) {
       index={index}
       onClick={squareFuncs[0]}
       onContextMenu={squareFuncs[1]}
-      contextMenu={false}
       className="square"
     ></button>
   );
